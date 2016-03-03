@@ -3,7 +3,7 @@ You have an array of integers. Create a new array containing the product of ever
 */
 
 var listOfNumbers = [1,2,3,4,5,6,7];
-//console.log('Input: Array of numbers, find the product of all numbers with one number removed: ' + listOfNumbers);
+console.log('Input: Array of numbers, find the product of all numbers with one number removed: ' + listOfNumbers);
 function get_products_of_all_ints_except_at_index(input)    {
     var results = [];
     var product = 1;
@@ -18,6 +18,6 @@ function get_products_of_all_ints_except_at_index(input)    {
         };
         results.push(product);
     };  // end of for loop pushing numbers into results array
-    //console.log('Array of products of all numbers after one number has been removed: ' + results);
+    console.log('Array of products of all numbers after one number has been removed: ' + results);
 };  // end of function
 get_products_of_all_ints_except_at_index(listOfNumbers);

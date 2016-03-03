@@ -41,12 +41,12 @@ function FindLargest (input)    {
 };
 
 function getMaxProfit(input)  {
-    //console.log('input: ' + input);
+    console.log('input: ' + input);
     var differences = differencearray(input,highrightarray(input));
     // take the result, sort it, reverse it, get the first element
-    //console.log('differences as an array ' + differences);
+    console.log('differences as an array ' + differences);
     var maxprofit = FindLargest(differences);
-    //console.log('Maximum profit achievable: ' + maxprofit)
+    console.log('Maximum profit achievable: ' + maxprofit)
 };
 
 getMaxProfit(stockPrices);

@@ -11,16 +11,19 @@ console.log("time to process " + numbers.length + ": " + elapsed);
 
 // create an array of random input to be passed in
 var data = [];
-var numberOfElements = 10;
-var valueRange = 10;
+var numberOfElements = 10000;
+var valueRange = 10000;
 
 for (var i = 0; i < numberOfElements; i++) {
     data.push(Math.floor(Math.random() * valueRange));
 };
-console.log('Raw data array: ' + data);
 
+console.log(valueRange + ' possible numbers per element');
+console.log(numberOfElements + ' elements in the raw data array');
+//console.log('Raw data array: ' + data);
 
 // bubble sort
+var start = (new Date()).getTime();
 var bubbleData = data.slice();
 
 for (var i = 0; i < bubbleData.length - 1; i++) {
@@ -33,12 +36,14 @@ for (var i = 0; i < bubbleData.length - 1; i++) {
     };
 };
 
-console.log('Bubble sorted data array: ' + bubbleData);
-
+var stop = (new Date()).getTime();
+//console.log('Bubble sorted data array: ' + bubbleData);
+console.log('Elapsed bubble sort time: ' + (stop - start));
 
 // bucket sort
 var bucketData = data.slice();
 var buckets = [];
+var begin = (new Date()).getTime();
 
 for (var i = 0; i < valueRange; i++)    {
     buckets.push(0);
@@ -56,4 +61,7 @@ for (var i = 0; i < buckets.length; i++)    {   // go through buckets
         buckets[i] -= 1;
     };
 };
-console.log('Bucket sorted data array: ' + bucketData);
+
+var end = (new Date()).getTime();
+//console.log('Bucket sorted data array: ' + bucketData);
+console.log('Elapsed bucket sort time: ' + (end - begin));
